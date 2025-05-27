@@ -22,7 +22,8 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build WebApp Image
-      run: docker build -t ghcr.io/${{ github.repository_owner }}/webapp:latest ./WebApp
+      run: docker build -t ghcr.io/${{ github.repository_owner }}/ass3-webapp:latest ./WebApp
 
     - name: Push WebApp Image
-      run: docker push ghcr.io/${{ github.repository_owner }}/webapp:latest
+      run: docker push ghcr.io/${{ github.repository_owner }}/ass3-webapp:latest
+
