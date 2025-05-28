@@ -27,3 +27,8 @@ jobs:
     - name: Push WebApp Image
       run: docker push ghcr.io/${{ github.repository_owner }}/ass3-webapp:latest
 
+    - name: Build DB Image
+      run: docker build -t ghcr.io/${{ github.repository_owner }}/ass3-db:latest -f Dockerfile-db .
+
+    - name: Push DB Image
+      run: docker push ghcr.io/${{ github.repository_owner }}/ass3-db:latest
