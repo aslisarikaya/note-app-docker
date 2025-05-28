@@ -1,1 +1,3 @@
-FROM postgres:14\nLABEL maintainer="safaesiraji00"
+FROM postgres:14
+
+LABEL maintainer="safaesiraji00"
