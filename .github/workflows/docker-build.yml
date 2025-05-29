@@ -22,13 +22,13 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build WebApp Image
-      run: docker build -t ghcr.io/${{ github.repository_owner }}/ass3-webapp:latest ./WebApp
+      run: docker build -t ghcr.io/aslisarikaya/note-app-docker-webapp:latest ./WebApp
 
     - name: Push WebApp Image
-      run: docker push ghcr.io/${{ github.repository_owner }}/ass3-webapp:latest
+      run: docker push ghcr.io/aslisarikaya/note-app-docker-webapp:latest
 
     - name: Build DB Image
-      run: docker build -t ghcr.io/${{ github.repository_owner }}/ass3-db:latest -f Dockerfile-db .
+      run: docker build -t ghcr.io/aslisarikaya/note-app-docker-db:latest -f Dockerfile-db .
 
     - name: Push DB Image
-      run: docker push ghcr.io/${{ github.repository_owner }}/ass3-db:latest
+      run: docker push ghcr.io/aslisarikaya/note-app-docker-db:latest
